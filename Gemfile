@@ -4,6 +4,7 @@ gem 'rails', '3.2.9'
 
 gem 'annotate'
 gem 'aws-ses'
+gem 'bcrypt-ruby'
 gem 'carrierwave'
 gem 'fog'
 gem 'httparty'

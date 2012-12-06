@@ -36,6 +36,7 @@ GEM
       mail (> 2.2.5)
       mime-types
       xml-simple
+    bcrypt-ruby (3.0.1)
     binding_of_caller (0.6.8)
     builder (3.0.4)
     carrierwave (0.7.1)
@@ -178,6 +179,7 @@ PLATFORMS
 DEPENDENCIES
   annotate
   aws-ses
+  bcrypt-ruby
   carrierwave
   coffee-rails (~> 3.2.1)
   fog

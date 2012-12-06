@@ -8,6 +8,14 @@
 </head>
 <body>
 
+ <nav>
+    <div id='nav'>
+      <%= link_to "home", root_path %>
+      <%= display_links %>
+    </div>
+    <div class='clear'></div>
+  </nav>
+
 <%= yield %>
 
 </body>
