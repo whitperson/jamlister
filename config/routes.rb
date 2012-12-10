@@ -6,7 +6,9 @@ Jamlister::Application.routes.draw do
 
   resources :songs
 
-  resources :shows
+  resources :concerts
+
+  resources :artists
 
   get '/register' => 'register#new'
   post '/register' => 'register#create'
@@ -14,7 +16,6 @@ Jamlister::Application.routes.draw do
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/logout' => 'session#destroy'
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

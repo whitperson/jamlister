@@ -1,0 +1,47 @@
+
+<%= form_for @song, :html => {:multipart => true} do |f| %>
+
+  <div class='field'>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <h1>Image</h1>
+  <div class='field'>
+    <%= f.label :local %>
+    <%= f.file_field :photo %>
+  </div>
+  <div class='field'>
+    <%= f.label :remote %>
+    <%= f.text_field :remote_photo_url %>
+  </div>
+  <div class='field'>
+    <%= f.hidden_field :photo_cache %>
+    <%= image_tag(@song.photo.small.url) if @song.photo? %>
+  </div>
+  <h1>Music</h1>
+  <div class='field'>
+    <%= f.label :local %>
+    <%= f.file_field :audio_file %>
+  </div>
+  <div class='field'>
+    <%= f.label :remote %>
+    <%= f.text_field :remote_audio_file_url %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :audio_link %>
+    <%= f.text_field :audio_link %>
+  </div>
+
+  <div class='field'>
+    <%= f.hidden_field :audio_file_cache %>
+    <%= audio_tag(@song.audio_file.url, :controls => :true) if @song.audio_file? %>
+  </div>
+  <div class='field'>
+    <%#= f.label :youtube %>
+    <%#= f.text_field :youtube %>
+  </div>
+  <div class='field'>
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,16 @@
 /*
  *= require_self
  *= require 'css/bootstrap.css'
+ *= require 'jplayer.blue.monday.css'
  */
+
+
+body {
+  margin: 20px;
+  border: 2px solid black;
+
+}
+
+nav {
+
+}

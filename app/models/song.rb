@@ -18,6 +18,5 @@ class Song < ActiveRecord::Base
   belongs_to :user
   mount_uploader :photo, PhotoUploader
   mount_uploader :audio_file, MusicUploader
-  mount_uploader :audio_link, MusicUploader
   validates :name, :presence => true
 end
