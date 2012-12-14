@@ -40,7 +40,7 @@ body
   background: rgb(255, 255, 255) transparent; /* default fallback */
   background: rgba(255, 255, 255, 0.8); /* nice browsers */
   background-color: white;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-bottom: 15%;
   margin-left: 30%;
   margin-right: 30%;
@@ -76,6 +76,9 @@ h1
   margin: 20px;
 }
 
+.btn {
+
+}
 
 
 /******************************************

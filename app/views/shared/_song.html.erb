@@ -3,7 +3,7 @@
 
     <div class="name"> <h2> <%= link_to song.name, song %> </h2> </div>
 
-    <div id='photo' class="saturate"><%= link_to image_tag(song.photo.small), song %></div>
+    <div id='photo' class="brightness"><%= link_to image_tag(song.photo.small), song %></div>
 
     <div class='player'>
     <%= audio_tag song.audio_file, :controls => true %>

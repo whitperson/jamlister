@@ -1,6 +1,8 @@
 Jamlister::Application.routes.draw do
 
   root :to => 'home#index'
+  post '/search' => 'home#search'
+  post '/get_tracks' => 'home#get_tracks'
 
   resources :users
 

@@ -1,0 +1,12 @@
+
+<ul>
+<% @data.each do |concert| %>
+    <li> <%= link_to concert['title'], "http://archive.org/details/#{concert['identifier']}", :target => "_blank" %></li>
+
+    <li> <%= concert["description"] %></li>
+    <% hidden_field_tag 'url', "http://archive.org/details/#{concert['identifier']}" %>
+    <%= link_to 'Get tracks from this show', get_tracks_path :class => 'btn btn-inverse' %>
+<% end %>
+</ul>
+
+

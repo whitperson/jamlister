@@ -1,27 +1,31 @@
 
 
   <div id="intro">
-    Welcome to Jamlister, an app for creating short snippets of the best moments of live concert audio.
+    Welcome to Best Live Version, an app for curating the best versions of live concert audio.
     Upload or link to your favorite tracks
     Edit them down to the best moments
 
-      -->>REGISTER BUTTON<<--
+
+      <%=  link_to 'Register', register_path, :class => 'btn btn-inverse' %>
+      <%=  link_to 'Login', login_path, :class => 'btn btn-inverse' %>
          <br><br>
-      -->>LOGIN WITH TWITTER<<--
+      (poss. LOGIN WITH TWITTER)
          <br><br>
-      -->>LOGIN WITH FACEBOOK<<--
+      (poss. LOGIN WITH FACEBOOK)
          <br><br>
   </div>
 
   <div id="get_started">
-
+    <h2>Get Started</h2>
       Need Audio? Search:
-      -->>SEARCH FIELD & BUTTON<<--
+      <%= render :partial => 'shared/search' %>
+
       <br><br>
       Already have a track in mind?
-      -->>GET STARTED BUTTON<<--
+      <%= link_to 'Create New Jam', new_song_path, :class => 'btn btn-inverse' %>
   </div>
 
+ <br><br>
   <div id="latest">
-  -->>SHOW LATEST SONGS<<--
+WILL SHOW LATEST SONGS
   </div>
