@@ -14,11 +14,20 @@ class SongsController < ApplicationController
   def create
     @song = Song.new(params[:song])
     if @song.save
+      @auth.songs << @song
       redirect_to @song
     else
       render :new
     end
   end
+
+  # def get_dl_url # Retrieves full concert link based on song url
+  #   raw_link = @song.audio_link
+  #   array = raw_link.split('/')
+  #   array.last.pop
+  #   new_link = array.join('/')
+  #   @dl_url = new_link.gsub('/download/', '/details/')
+  # end
 
   def edit
     @song = Song.find(params[:id])

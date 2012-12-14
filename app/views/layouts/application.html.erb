@@ -5,18 +5,36 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
 </head>
+
 <body>
+  <div class="container">
 
-  <nav>
-    <div id='nav'>
-      <%= link_to "home ", root_path %> |
-      <%= display_links %>
+    <header>
+      <h1>JAMLISTER</h1>
+    </header>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <ul class="nav nav-pills">
+          <li><%= link_to "home ", root_path %></li>
+          <li><%= display_links %></li>
+        </ul>
+      </div>
     </div>
-    <div class='clear'></div>
-  </nav>
+         <%= yield %>
+  </div>
 
-<%= yield %>
+        <script>
+          // $.backstretch([
+          // "../assets/pedals.jpg"
+          // , "../assets/phish_redyellow.jpg"
+          // , "../assets/thenewdeal.jpg"
+          // ],{duration:3000,fade:750});
+        </script>
 
-</body>
+  </body>
 </html>

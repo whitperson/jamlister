@@ -4,13 +4,130 @@
  *= require 'jplayer.blue.monday.css'
  */
 
+@import url(http://fonts.googleapis.com/css?family=Bitter);
 
-body {
-  margin: 20px;
-  border: 2px solid black;
+html
+{ height: 100%
+}
 
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+body
+{
+  height: 100%;
+  background-image: url('../assets/pedals.jpg');
+  background-repeat: repeat-y;
+  background-position: center center fixed;
+  background-size: cover;
+}
+
+.container
+{
+/*  opacity: .9;*/
+  background: rgb(255, 255, 255) transparent; /* default fallback */
+  background: rgba(255, 255, 255, 0.8); /* nice browsers */
+  background-color: white;
+  margin-top: 5%;
+  margin-bottom: 15%;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-bottom: 15%;
+  font-family: 'Bitter', serif;
+  font-size: 20px;
+}
+
+header {
+  text-align: center;
 }
 
 nav {
-
+  float: left;
 }
+
+h1
+{
+  margin-left: 35px;
+  padding: 20px;
+}
+
+#songs
+{
+  float: left;
+  margin-left: 35px;
+  padding: 20px;
+}
+
+.form
+{
+  padding: 20px;
+  margin: 20px;
+}
+
+
+
+/******************************************
+/* PHOTO FILTERS
+/*******************************************/
+
+#photo {
+  display: block;
+  border-radius: 10px;
+  -webkit-transition: all 0.5s;
+  -webkit-border-radius: 3px 4px 6px #0D0A03;
+  -moz-border-radius: 3px 4px 6px #0D0A03;
+  box-shadow: 3px 4px 6px #0D0A03;
+}
+
+/*Hover effects*/
+#photo:hover {
+  -webkit-filter: none; /*Returns to default state*/
+  border-radius: 10px;
+  -webkit-border-radius: 5px 6px 7px #0D0A03;
+  -moz-border-radius: 5px 6px 7px #0D0A03;
+  box-shadow: 5px 6px 7px #0D0A03;
+}
+/*Default state for brightness has to be specified specifically*/
+#photo img.brightness:hover {
+  -webkit-filter: brightness(0);
+}
+
+/*Title styles*/
+/*.title {
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  z-index: 1;
+  padding: 5px 7px;
+  background: rgba(0, 0, 0, 0.6);
+}*/
+
+
+/*Filter styles*/
+.saturate {-webkit-filter: saturate(3);}
+.grayscale {-webkit-filter: grayscale(100%);}
+.contrast {-webkit-filter: contrast(160%);}
+.brightness {-webkit-filter: brightness(0.25);}
+.blur {-webkit-filter: blur(3px);}
+.invert {-webkit-filter: invert(100%);}
+.sepia {-webkit-filter: sepia(100%);}
+.huerotate {-webkit-filter: hue-rotate(180deg);}
+.opacity {-webkit-filter: opacity(50%);}
+
+
+
