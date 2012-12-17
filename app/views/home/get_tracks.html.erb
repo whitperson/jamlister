@@ -1,1 +1,16 @@
-<h1>GET TRACKS PAGE</h1>
+<h2>All Tracks From Selected Concert</h2>
+
+<ul>
+<% @tracks.each do |track| %>
+  <li> <%= link_to track.title, track.url %> </li>
+  <li> <%= audio_tag track.url, :controls => true %></li>
+
+  <%= form_tag '/songs/new' do %>
+    <% params[:name] = track.title %>
+    <% params[:audio_link] = track.url %>
+    <%= hidden_field_tag 'audio_link', params[:audio_link] %>
+    <%= hidden_field_tag 'name', params[:name] %>
+    <%= submit_tag 'Use this track', :class => 'btn btn-inverse' %>
+  <% end %>
+</ul>
+<% end %>

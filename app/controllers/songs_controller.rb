@@ -8,7 +8,11 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    if params[:audio_link] && params[:name]
+      @song = Song.new(:name => params[:name], :audio_link => params[:audio_link])
+    else
+      @song = Song.new
+    end
   end
 
   def create

@@ -1,8 +1,8 @@
 Jamlister::Application.routes.draw do
 
-  root :to => 'home#index'
   post '/search' => 'home#search'
   post '/get_tracks' => 'home#get_tracks'
+  post '/songs/new' => 'songs#new'
 
   resources :users
 
@@ -18,6 +18,8 @@ Jamlister::Application.routes.draw do
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/logout' => 'session#destroy'
+
+  root :to => 'home#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

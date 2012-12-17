@@ -1,31 +1,36 @@
 
+<div id="intro" class="row">
+    <p>Welcome to Best Ever Live Version, an app for curating the best versions of live concert audio.
+    Upload or link to your favorite tracks, edit them down to the best moments, and share them with the rest of the concert freaks of the world.</p>
 
-  <div id="intro">
-    Welcome to Best Live Version, an app for curating the best versions of live concert audio.
-    Upload or link to your favorite tracks
-    Edit them down to the best moments
-
-
-      <%=  link_to 'Register', register_path, :class => 'btn btn-inverse' %>
-      <%=  link_to 'Login', login_path, :class => 'btn btn-inverse' %>
-         <br><br>
-      (poss. LOGIN WITH TWITTER)
-         <br><br>
-      (poss. LOGIN WITH FACEBOOK)
-         <br><br>
+  <div id="intro_buttons">
+      <%= display_buttons %>
   </div>
+</div>
 
-  <div id="get_started">
-    <h2>Get Started</h2>
-      Need Audio? Search:
+<div class="row">
+  <div class="span8 offset2">
+    <h1>Get Started</h1>
+    </div>
+</div>
+
+<div id="get_started" class="row">
+  <div id="feature1" class="span4 offset2">
+          <h3> Need Audio? Search:</h3>
       <%= render :partial => 'shared/search' %>
+</div>
 
-      <br><br>
-      Already have a track in mind?
-      <%= link_to 'Create New Jam', new_song_path, :class => 'btn btn-inverse' %>
+  <div id="feature2" class="span4">
+  <h3>Already have a live track in mind?</h3>
+      <%= link_to 'CREATE NEW JAM', new_song_path, :class => 'btn btn-inverse' %>
   </div>
+</div>
 
- <br><br>
-  <div id="latest">
-WILL SHOW LATEST SONGS
+<div class="row">
+  <div id="latest" class="span8 offset2">
+    <h1>Check out the latest live tracks....</h1>
+
+    <%= render :partial => 'shared/song', :collection => @songs, :as => :song %>
+
   </div>
+</div>

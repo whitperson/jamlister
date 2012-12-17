@@ -1,12 +1,17 @@
 
-<ul>
-<% @data.each do |concert| %>
-    <li> <%= link_to concert['title'], "http://archive.org/details/#{concert['identifier']}", :target => "_blank" %></li>
+<div id="search" class="row">
+  <div id="search" class="grid_8">
+    <ul>
+    <% @data.each do |concert| %>
+        <li class="concert"> <%= link_to concert['title'], "http://archive.org/details/#{concert['identifier']}", :target => "_blank" %></li>
+        <% params[:url] = "http://archive.org/details/#{concert['identifier']}&output=json" %>
+        <li class="description"> <%= concert["description"] %></li>
 
-    <li> <%= concert["description"] %></li>
-    <% hidden_field_tag 'url', "http://archive.org/details/#{concert['identifier']}" %>
-    <%= link_to 'Get tracks from this show', get_tracks_path :class => 'btn btn-inverse' %>
-<% end %>
-</ul>
-
-
+        <%= form_tag '/get_tracks' do %>
+          <%= hidden_field_tag 'url', params[:url] %>
+          <%= submit_tag 'Get tracks from this show', :class => 'btn btn-inverse' %>
+        <% end %>
+    <% end %>
+    </ul>
+  </div>
+</div>

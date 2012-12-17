@@ -4,8 +4,9 @@
 
   <div class='field'>
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :value => params[:name] %>
   </div>
+
   <h3>Image</h3>
   <div class='field'>
     <%= f.label :local %>
@@ -19,18 +20,20 @@
     <%= f.hidden_field :photo_cache %>
     <%= image_tag(@song.photo.small.url) if @song.photo? %>
   </div>
-  <h3>Music</h3>
+
+  <h3>Audio</h3>
+
+  <div class='field'>
+    <%= f.label :remote %>
+    <%= f.text_field :audio_link, :value => params[:audio_link] %>
+  </div>
+
   <div class='field'>
     <%= f.label :local %>
     <%= f.file_field :audio_file %>
   </div>
 
-  <div class='field'>
-    <%= f.label :remote %>
-    <%= f.text_field :audio_link %>
-  </div>
-
-  <div class='field'>
+    <div class='field'>
     <%= f.hidden_field :audio_file_cache %>
     <%= audio_tag(@song.audio_file.url, :controls => :true) if @song.audio_file? %>
   </div>

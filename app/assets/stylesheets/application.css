@@ -1,15 +1,16 @@
 /*
  *= require_self
  *= require 'css/bootstrap.css'
+ *= require 'alertify.css'
  *= require 'jplayer.blue.monday.css'
  */
 
-@import url(http://fonts.googleapis.com/css?family=Bitter);
+@import url(http://fonts.googleapis.com/css?family=Molengo);
+@import url(http://fonts.googleapis.com/css?family=Lekton);
 
 html
 { height: 100%
 }
-
 
 /* Clear fix hack */
 .clearfix:after {
@@ -32,35 +33,128 @@ body
   background-repeat: repeat-y;
   background-position: center center fixed;
   background-size: cover;
+  color: #3F3D32;
+  -webkit-font-smoothing: anti-aliased;
 }
 
 .container
 {
-/*  opacity: .9;*/
   background: rgb(255, 255, 255) transparent; /* default fallback */
   background: rgba(255, 255, 255, 0.8); /* nice browsers */
   background-color: white;
-  margin-top: 10%;
+  margin-top: 5%;
   margin-bottom: 15%;
   margin-left: 30%;
   margin-right: 30%;
   padding-bottom: 15%;
-  font-family: 'Bitter', serif;
   font-size: 20px;
+  font-family: 'Lekton', sans-serif;
+  border-radius: 30px;
+
 }
 
 header {
+  background-image: url('../assets/tapermic_logo_mono.png');
+  background-repeat:no-repeat;
+  background-position:center;
+  background-position: top;
   text-align: center;
-}
-
-nav {
-  float: left;
+  padding-top: 175px;
+  font-size: 40px;
+  font-family: 'Molengo', sans-serif;
 }
 
 h1
 {
-  margin-left: 35px;
-  padding: 20px;
+  align: left;
+  font-family: 'Molengo', sans-serif;
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+.nav-pills {
+  font-family: 'Molengo', sans-serif;
+  padding: 30px;
+  margin: 2px;
+}
+
+.form
+{
+  align: left;
+  font-family: 'Molengo', sans-serif;
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+.field {
+  align: left;
+  font-family: 'Molengo', sans-serif;
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+#intro
+{
+  float: left;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #3f3f3f;
+}
+
+#intro p {
+  margin: 20px;
+}
+
+#intro .btn {
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 20px;
+  width: 200px;
+}
+
+#get_started h2
+{
+  font-family: 'Molengo', sans-serif;
+  margin-top: 10px;
+  float: left;
+}
+
+#get_started .btn
+{
+  font-family: 'Molengo', sans-serif;
+  float: left;
+  padding: 10px;
+  font-size: 18px;
+  width: 200px;
+}
+
+#get_started
+{
+  margin-bottom: 20px;
+}
+
+#search_form
+{
+
+}
+
+#latest {
+  border-top: 3px solid #3f3f3f;
+  margin-top: 20px;
+  padding-top: 20px
+}
+
+#search {
+  margin: 5%;
+}
+
+
+#search li
+{
+  list-style: none;
 }
 
 #songs
@@ -72,12 +166,19 @@ h1
 
 .form
 {
+  font-family: 'Molengo', sans-serif;
+  float: left;
   padding: 20px;
   margin: 20px;
 }
 
 .btn {
-
+  font-family: 'Molengo', sans-serif;
+/*  margin-right: 10%;
+  margin-left: 10%;*/
+  padding: 10px;
+  font-size: 20px;
+  width: 200px;
 }
 
 

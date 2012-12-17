@@ -2,7 +2,8 @@ class HomeController < ApplicationController
 before_filter :allow_cross_origin_access
 
   def index
-  end
+    @songs = Song.all
+  end #switch to random, array = (1..10).to_a and call => a.sample(2)
 
   def search
     query = params[:query].downcase
@@ -13,8 +14,20 @@ before_filter :allow_cross_origin_access
     @data
   end
 
-  def get_tracks(url)
-    raise params.inspect
+  def get_tracks
+    @tracks = []
+    json = HTTParty.get(params[:url])
+    raw_concert_url = params[:url]
+    concert_url_pref = raw_concert_url.gsub("http://archive.org/details/","http://archive.org/download/")
+    concert_url = concert_url_pref.gsub('&output=json', '')
+    json['files'].keys.each do |x|
+      if x.include?('.mp3')
+        track = Track.new
+        track.title = json['files'][x]['title']
+        track.url = concert_url+x
+        @tracks << track
+      end
+    end
   end
 
   private
@@ -23,14 +36,4 @@ before_filter :allow_cross_origin_access
       response.headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS'
     end # allows anyone to post, get, etc....
 end
-
-
- # require 'open-uri'
-     # noko_data = Nokogiri::HTML(open("http://archive.org/advancedsearch.php?q=#{query_text}+etree+&fl%5B%5D=collection&fl%5B%5D=date&fl%5B%5D=description&fl%5B%5D=format&fl%5B%5D=identifier&fl%5B%5D=mediatype&fl%5B%5D=title&sort%5B%5D=&sort%5B%5D=&sort%5B%5D=&rows=50&page=1"))
- #    doc = Nokogiri::HTML(open('http://news.ycombinator.com/newest'))
- #    links = doc.css('table table tr:nth-child(3n+1) td:nth-child(3) > a')
- #    links.each do |link|
- #      record = Link.where(:name => link.content, :url => link.get_attribute('href')).first
- #      Link.create(:name => link.content, :url => link.get_attribute('href')) if record.nil?
- #    end
 

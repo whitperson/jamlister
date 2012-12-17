@@ -1,6 +1,8 @@
 
- <%= form_tag('/search') do %>
-  <%= text_field_tag(:query, nil, :placeholder => 'Search for a taper-friendly band') %>
-  <%= submit_tag('Search', :id => 'search_button', :class=> 'btn btn-inverse')%>
-<% end %>
+<div id="search_form">
+   <%= form_tag('/search') do %>
+    <%= text_field_tag(:query, nil, :placeholder => 'Search for a taper-friendly band') %> <br><br>
+    <%= submit_tag('SEARCH', :id => 'search_button', :class=> 'btn btn-inverse')%>
+  <% end %>
+</div>
 

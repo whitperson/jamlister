@@ -12,19 +12,19 @@
 
 <body>
   <div class="container">
-
-    <header>
-      <h1>Best Live Version</h1>
-    </header>
-
     <div class="navbar">
       <div class="navbar-inner">
-        <ul class="nav nav-pills">
-          <li><%= link_to "home ", root_path %></li>
-          <li><%= display_links %></li>
-        </ul>
+        <div class="nav nav-pills">
+          <%= link_to "HOME | ", root_path %>
+          <%= display_links %>
+        </div>
       </div>
     </div>
+
+    <header>
+      <h1>Best Ever Live Version</h1>
+    </header>
+
          <%= yield %>
   </div>
 
