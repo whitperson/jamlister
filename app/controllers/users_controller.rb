@@ -1,15 +1,30 @@
 class UsersController < ApplicationController
   before_filter :ensure_logged_in
 
+  def index
+    @users = User.all
+  end
+
   def show
+    if params[:id]
+      @user = User.find(params[:id])
+    else
+      @user = @auth
+    end
+  end
+
+  def songs
+    @songs = Song.where(:user_id => params[:id])
+  end
+
+  def edit
     if params[:id]
       @profile = User.find(params[:id])
     else
       @profile = @auth
     end
   end
-  def edit
-  end
+
   def update
     if @auth.update_attributes(params[:user])
       redirect_to profile_path

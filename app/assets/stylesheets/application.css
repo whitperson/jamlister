@@ -1,8 +1,6 @@
 /*
- *= require_self
  *= require 'css/bootstrap.css'
- *= require 'alertify.css'
- *= require 'jplayer.blue.monday.css'
+ *= require_self
  */
 
 @import url(http://fonts.googleapis.com/css?family=Molengo);
@@ -44,8 +42,6 @@ body
   background-color: white;
   margin-top: 5%;
   margin-bottom: 15%;
-  margin-left: 30%;
-  margin-right: 30%;
   padding-bottom: 15%;
   font-size: 20px;
   font-family: 'Lekton', sans-serif;
@@ -68,8 +64,8 @@ h1
 {
   align: left;
   font-family: 'Molengo', sans-serif;
-  margin-right: 15%;
-  margin-left: 15%;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
 .nav-pills {
@@ -78,19 +74,29 @@ h1
   margin: 2px;
 }
 
-.form
+.navsearch
 {
-  align: left;
-  font-family: 'Molengo', sans-serif;
-  margin-right: 15%;
-  margin-left: 15%;
+  margin-top: 25px;
 }
 
+/*.navsearch .btn
+{
+ height: 30px;
+ width: 100px;
+ font-size: 14px;
+ padding: 10px;
+}
+*/
+
+#form
+{
+  margin-left: 150px;
+}
+
+
+
 .field {
-  align: left;
   font-family: 'Molengo', sans-serif;
-  margin-right: 15%;
-  margin-left: 15%;
 }
 
 #intro
@@ -119,7 +125,6 @@ h1
 {
   font-family: 'Molengo', sans-serif;
   margin-top: 10px;
-  float: left;
 }
 
 #get_started .btn
@@ -136,19 +141,11 @@ h1
   margin-bottom: 20px;
 }
 
-#search_form
-{
-
-}
 
 #latest {
   border-top: 3px solid #3f3f3f;
   margin-top: 20px;
   padding-top: 20px
-}
-
-#search {
-  margin: 5%;
 }
 
 
@@ -157,20 +154,61 @@ h1
   list-style: none;
 }
 
-#songs
+#search.btn
 {
-  float: left;
-  margin-left: 35px;
-  padding: 20px;
+  float: right;
+}
+
+.songs
+{
+  text-align: center;
+  height: 300px;
+  margin-bottom: 40px;
+}
+
+.concert
+{
+  text-align: center;
+  height: 300px;
+  margin-bottom: 40px;
+}
+
+.concert h1 {
+  margin-left: 5%;
+}
+
+.concertname
+{
+  width: 300px;
+}
+
+.artists
+{
+  text-align: center;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+.links {
+  font-size: 14px;
+  margin-top: 25px;
 }
 
 .form
 {
   font-family: 'Molengo', sans-serif;
-  float: left;
-  padding: 20px;
-  margin: 20px;
+  padding: 10px;
+  margin: 10px;
 }
+
+.field
+
+.form_text
+{
+  margin-left: 136px;
+}
+
+
 
 .btn {
   font-family: 'Molengo', sans-serif;
@@ -181,46 +219,39 @@ h1
   width: 200px;
 }
 
+#get_tracks
+{
+  padding: 15px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+#get_tracks ul li
+{
+ list-style: none;
+}
 
 /******************************************
 /* PHOTO FILTERS
 /*******************************************/
 
-#photo {
-  display: block;
+.photo  {
+/*  display: block;*/
   border-radius: 10px;
   -webkit-transition: all 0.5s;
-  -webkit-border-radius: 3px 4px 6px #0D0A03;
-  -moz-border-radius: 3px 4px 6px #0D0A03;
-  box-shadow: 3px 4px 6px #0D0A03;
+  max-height: 200px;
 }
 
 /*Hover effects*/
-#photo:hover {
+.photo:hover {
   -webkit-filter: none; /*Returns to default state*/
   border-radius: 10px;
-  -webkit-border-radius: 5px 6px 7px #0D0A03;
-  -moz-border-radius: 5px 6px 7px #0D0A03;
-  box-shadow: 5px 6px 7px #0D0A03;
+
 }
 /*Default state for brightness has to be specified specifically*/
-#photo img.brightness:hover {
+.photo img.brightness:hover {
   -webkit-filter: brightness(0);
 }
-
-/*Title styles*/
-/*.title {
-  color: #fff;
-  font-size: 13px;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-  bottom: 15px;
-  z-index: 1;
-  padding: 5px 7px;
-  background: rgba(0, 0, 0, 0.6);
-}*/
-
 
 /*Filter styles*/
 .saturate {-webkit-filter: saturate(3);}
@@ -231,7 +262,5 @@ h1
 .invert {-webkit-filter: invert(100%);}
 .sepia {-webkit-filter: sepia(100%);}
 .huerotate {-webkit-filter: hue-rotate(180deg);}
-.opacity {-webkit-filter: opacity(50%);}
-
-
+.opacity {-webkit-filter: opacity(70%);}
 

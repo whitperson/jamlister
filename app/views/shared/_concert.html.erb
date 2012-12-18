@@ -1,7 +1,11 @@
-    <div class='photo'><%= link_to image_tag(concert.photo.small), concert %></div>
 
-    <div class='name'>
-        <%= link_to concert.name, concert %>
+  <div class="concert span4">
+    <h4>  <%= link_to concert.name, concert %> </h4>
+
+    <div class="photo opacity"><%= link_to image_tag(concert.photo.small), concert %></div>
+
+    <div class="links">
         <%= link_to 'Edit', edit_concert_path(concert) %>
         <%= link_to 'Delete', concert, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
+  </div>

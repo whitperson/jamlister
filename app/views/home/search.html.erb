@@ -1,9 +1,9 @@
 
 <div id="search" class="row">
-  <div id="search" class="grid_8">
+  <div class="span9 offset2">
     <ul>
     <% @data.each do |concert| %>
-        <li class="concert"> <%= link_to concert['title'], "http://archive.org/details/#{concert['identifier']}", :target => "_blank" %></li>
+        <li class="show_link"> <%= link_to concert['title'], "http://archive.org/details/#{concert['identifier']}", :target => "_blank" %></li>
         <% params[:url] = "http://archive.org/details/#{concert['identifier']}&output=json" %>
         <li class="description"> <%= concert["description"] %></li>
 

@@ -2,8 +2,10 @@ module ApplicationHelper
   def display_links
     if @auth
       link_to(" LOGOUT | ", logout_path, :method => :delete) +
-      link_to(" All JAMS | ", songs_path) +
-      link_to(" CREATE NEW JAM ", new_song_path)
+      link_to(" ALL JAMS | ", songs_path) +
+      link_to(" CREATE NEW JAM | ", new_song_path) +
+      link_to(" ARTISTS | ", artists_path) +
+      link_to(" CONCERTS ", concerts_path)
     else
       link_to(" LOGIN | ", login_path) +
       link_to(" REGISTER ", register_path)
@@ -13,7 +15,7 @@ module ApplicationHelper
   def display_buttons
     if @auth
       link_to(" LOGOUT ", logout_path, :method => :delete, :class => 'btn btn-inverse') +
-      link_to(" MY JAMS ", songs_path, :class => 'btn btn-inverse')
+      link_to(" MY JAMS ", users_songs_path(@auth), :class => 'btn btn-inverse')
     else
       link_to(" LOGIN ", login_path, :class => 'btn btn-inverse') +
       link_to(" REGISTER ", register_path, :class => 'btn btn-inverse')

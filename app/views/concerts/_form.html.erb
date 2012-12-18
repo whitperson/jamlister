@@ -1,27 +1,33 @@
-<%= form_for @concert, :html => {:multipart => true} do |f| %>
+<div class="row">
 
-  <div class='field'>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+  <div class="span8 offset2">
+  <%= form_for @concert, :html => {:multipart => true} do |f| %>
 
-  <h1>Image</h1>
-  <div class='field'>
-    <%= f.label :local %>
-    <%= f.file_field :photo %>
-  </div>
+    <div class='field'>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
 
-  <div class='field'>
-    <%= f.label :remote %>
-    <%= f.text_field :remote_photo_url %>
-  </div>
+    <h3>Image</h3>
+    <div class='field'>
+      <%= f.label :local %>
+      <%= f.file_field :photo %>
+    </div>
 
-  <div class='field'>
-    <%= f.hidden_field :photo_cache %>
-    <%= image_tag(@concert.photo.small.url) if @concert.photo? %>
-  </div>
+    <div class='field'>
+      <%= f.label :remote %>
+      <%= f.text_field :remote_photo_url %>
+    </div>
 
-  <div class='field'>
-    <%= f.submit %>
-  </div>
+    <div class='field'>
+      <%= f.hidden_field :photo_cache %>
+      <%= image_tag(@concert.photo.small.url) if @concert.photo? %>
+    </div>
+
+    <div class='field'>
+      <%= f.submit %>
+    </div>
+</div>
+
 <% end %>
+</div>

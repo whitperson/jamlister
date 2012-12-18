@@ -1,45 +1,44 @@
 
-<div class="form">
-<%= form_for @song, :html => {:multipart => true} do |f| %>
-
-  <div class='field'>
-    <%= f.label :name %>
-    <%= f.text_field :name, :value => params[:name] %>
-  </div>
-
-  <h3>Image</h3>
-  <div class='field'>
-    <%= f.label :local %>
-    <%= f.file_field :photo %>
-  </div>
-  <div class='field'>
-    <%= f.label :remote %>
-    <%= f.text_field :remote_photo_url %>
-  </div>
-  <div class='field'>
-    <%= f.hidden_field :photo_cache %>
-    <%= image_tag(@song.photo.small.url) if @song.photo? %>
-  </div>
-
-  <h3>Audio</h3>
-
-  <div class='field'>
-    <%= f.label :remote %>
-    <%= f.text_field :audio_link, :value => params[:audio_link] %>
-  </div>
-
-  <div class='field'>
-    <%= f.label :local %>
-    <%= f.file_field :audio_file %>
-  </div>
+<div id="form">
+    <%= form_for @song, :html => {:multipart => true} do |f| %>
 
     <div class='field'>
-    <%= f.hidden_field :audio_file_cache %>
-    <%= audio_tag(@song.audio_file.url, :controls => :true) if @song.audio_file? %>
-  </div>
+      <%= f.label :name %>
+      <%= f.text_field :name, :value => params[:name] %>
+    </div>
 
-  <div class='field'>
-    <%= f.submit  :class => 'btn btn-inverse' %>
-  </div>
-<% end %>
+    <h3>Image</h3>
+    <div class='field'>
+      <%= f.label :local %>
+      <%= f.file_field :photo %>
+    </div>
+    <div class='field'>
+      <%= f.label :remote %>
+      <%= f.text_field :remote_photo_url %>
+    </div>
+    <div class='field'>
+      <%= f.hidden_field :photo_cache %>
+      <%= image_tag(@song.photo.small.url) if @song.photo? %>
+    </div>
+
+    <h3>Audio</h3>
+    <div class='field'>
+      <%= f.label :remote %>
+      <%= f.text_field :audio_link, :value => params[:audio_link] %>
+    </div>
+
+    <div class='field'>
+      <%= f.label :local %>
+      <%= f.file_field :audio_file %>
+    </div>
+
+      <div class='field'>
+      <%= f.hidden_field :audio_file_cache %>
+      <%= audio_tag(@song.audio_file.url, :controls => :true) if @song.audio_file? %>
+    </div>
+
+    <div class='field'>
+      <%= f.submit  :class => 'btn btn-inverse' %>
+    </div>
+  <% end %>
 </div>

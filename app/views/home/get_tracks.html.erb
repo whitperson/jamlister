@@ -1,16 +1,31 @@
-<h2>All Tracks From Selected Concert</h2>
 
-<ul>
-<% @tracks.each do |track| %>
-  <li> <%= link_to track.title, track.url %> </li>
-  <li> <%= audio_tag track.url, :controls => true %></li>
+<div id="search" class="row">
+  <div class="span9 offset1">
+    <h2>All Tracks From Selected Concert</h2>
+</div>
 
-  <%= form_tag '/songs/new' do %>
-    <% params[:name] = track.title %>
-    <% params[:audio_link] = track.url %>
-    <%= hidden_field_tag 'audio_link', params[:audio_link] %>
-    <%= hidden_field_tag 'name', params[:name] %>
-    <%= submit_tag 'Use this track', :class => 'btn btn-inverse' %>
-  <% end %>
-</ul>
-<% end %>
+  <div id="get_tracks" class="span12">
+    <ul>
+      <% @tracks.each do |track| %>
+        <li>
+          <div class="span3">
+            <h4> <%= link_to track.title, track.url %> </h4>
+          </div>
+          <div class="span3">
+            <%= audio_tag track.url, :controls => true %>
+         </div>
+
+          <div class="span3">
+          <%= form_tag '/songs/new' do %>
+            <% params[:name] = track.title %>
+            <% params[:audio_link] = track.url %>
+            <%= hidden_field_tag 'audio_link', params[:audio_link] %>
+            <%= hidden_field_tag 'name', params[:name] %>
+            <%= submit_tag 'Use this track', :class => 'btn btn-inverse' %>
+          <% end %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
