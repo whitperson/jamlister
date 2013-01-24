@@ -4,3 +4,9 @@
   <%= render :partial => 'shared/artist', :locals => {:artist => @artist} %>
   </div>
 </div>
+
+<div class="row">
+  <div class='songs'>
+  <h2>Jams by <%= @artist.name %></h2>
+    <%= render :partial => 'shared/song', :collection => @songs, :as => :song %>
+  </div>

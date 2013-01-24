@@ -1,234 +1,277 @@
 /*
- *= require 'css/bootstrap.css'
  *= require_self
+ *= require 'css/bootstrap.css'
  */
 
 @import url(http://fonts.googleapis.com/css?family=Molengo);
 @import url(http://fonts.googleapis.com/css?family=Lekton);
 
-html
+/*html
 { height: 100%
 }
+*/
 
-/* Clear fix hack */
-.clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
-}
-
-.clear {
-  clear: both;
-}
+/*------------
+GLOBAL STYLES
+-------------*/
 
 body
 {
-  height: 100%;
-  background-image: url('../assets/pedals.jpg');
+ /* background-image: url('../assets/pedals.jpg');
   background-repeat: repeat-y;
   background-position: center center fixed;
-  background-size: cover;
+  background-size: cover;*/
   color: #3F3D32;
-  -webkit-font-smoothing: anti-aliased;
+/*  -webkit-font-smoothing: anti-aliased;*/
 }
 
-.container
+header {
+/*  border-bottom: 1px dashed #3F3D32;*/
+  margin-top: 2%;
+}
+
+.container-fluid
 {
   background: rgb(255, 255, 255) transparent; /* default fallback */
   background: rgba(255, 255, 255, 0.8); /* nice browsers */
   background-color: white;
-  margin-top: 5%;
-  margin-bottom: 15%;
-  padding-bottom: 15%;
-  font-size: 20px;
   font-family: 'Lekton', sans-serif;
-  border-radius: 30px;
+  border-radius: 12px;
+  margin: 8%;
+/*  margin: 0 auto;
+  max-width: 960px; */
+}
+
+.btn
+{
+  font-family: 'Lekton', sans-serif;
+}
+
+
+li.btn
+{
+  padding: 0px 9px;
 
 }
 
-header {
+#nav
+{
+  margin-bottom: 10%;
+}
+
+.nav li
+{
+  font-family: 'Molengo', sans-serif;
+  font-size: 1.00em;
+}
+
+.navsearch
+{
+  width: 30%;
+  margin-top: 1%;
+  margin-bottom: -2%;
+}
+
+#search_button
+{
+  margin-top: -3%;
+
+}
+
+#search input[type="text"]
+{
+  font-size: 0.875em;
+  font-family: 'Molengo', sans-serif;
+  width: 10%;
+}
+
+.form_h2
+{
+  margin-top: 10%;
+}
+
+.field input {
+ font-family: 'Molengo', sans-serif;
+}
+
+.field input[type="submit"]
+{
+  margin-top: 1%;
+}
+
+.field input [type="button"] {
+ font-family: 'Molengo', sans-serif;
+ font-size: 1.500em;
+}
+
+.form
+{
+/*  font-family: 'Molengo', sans-serif;
+  padding: 10px;
+  margin: 10px;*/
+}
+
+.form_text
+{
+/*  margin-left: 136px;*/
+}
+
+.form .btn {
+/*  font-family: 'Molengo', sans-serif;
+  margin-right: 10%;
+  margin-left: 10%;
+  padding: 10px;
+  font-size: 20px;
+  width: 200px;
+*/
+}
+
+
+/*-------------
+HOMEPAGE STYLES
+--------------*/
+
+header
+{
   background-image: url('../assets/tapermic_logo_mono.png');
   background-repeat:no-repeat;
   background-position:center;
   background-position: top;
   text-align: center;
   padding-top: 175px;
-  font-size: 40px;
   font-family: 'Molengo', sans-serif;
 }
 
 h1
 {
-  align: left;
-  font-family: 'Molengo', sans-serif;
-  margin-right: 10%;
-  margin-left: 10%;
-}
-
-.nav-pills {
-  font-family: 'Molengo', sans-serif;
-  padding: 30px;
-  margin: 2px;
-}
-
-.navsearch
-{
-  margin-top: 25px;
-}
-
-/*.navsearch .btn
-{
- height: 30px;
- width: 100px;
- font-size: 14px;
- padding: 10px;
-}
-*/
-
-#form
-{
-  margin-left: 150px;
-}
-
-
-
-.field {
   font-family: 'Molengo', sans-serif;
 }
 
-#intro
+#intro p
 {
-  float: left;
-  margin-right: 15%;
+  font-size: 1.200em;
+  text-align: center;
+}
+
+#main_buttons .btn
+{
+  width: 20%;
+  height: auto;
+  text-align: center;
   margin-left: 15%;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #3f3f3f;
+  margin-bottom: 10%;
+  margin-top: 5%;
 }
 
-#intro p {
-  margin: 20px;
+#main_buttons {
+  border-bottom: 1px dashed #3f3f3f;
+  margin-bottom: 3%;
 }
 
-#intro .btn {
-  margin-right: 10%;
-  margin-left: 10%;
-  margin-bottom: 20px;
-  padding: 10px;
-  font-size: 20px;
-  width: 200px;
+#get_started
+{
+
 }
 
 #get_started h2
 {
   font-family: 'Molengo', sans-serif;
-  margin-top: 10px;
+  margin-top: 5%;
+  text-align: center;
 }
 
-#get_started .btn
+.feature /* x3 feature units */
+{
+
+  text-align: center;
+}
+
+.feature .btn
+{
+
+
+}
+
+.latest
+{
+  border-top: 1px dashed #3f3f3f;
+  margin-top: 5%;
+}
+
+.latest h2
 {
   font-family: 'Molengo', sans-serif;
-  float: left;
-  padding: 10px;
-  font-size: 18px;
-  width: 200px;
-}
-
-#get_started
-{
-  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 5%;
 }
 
 
-#latest {
-  border-top: 3px solid #3f3f3f;
-  margin-top: 20px;
-  padding-top: 20px
-}
-
+/*-------------
+INTERNAL PAGES
+--------------*/
 
 #search li
 {
   list-style: none;
 }
 
-#search.btn
+#search input[type="submit"]
 {
-  float: right;
-}
 
-.songs
-{
-  text-align: center;
-  height: 300px;
-  margin-bottom: 40px;
-}
-
-.concert
-{
-  text-align: center;
-  height: 300px;
-  margin-bottom: 40px;
-}
-
-.concert h1 {
-  margin-left: 5%;
-}
-
-.concertname
-{
-  width: 300px;
-}
-
-.artists
-{
-  text-align: center;
-  height: 300px;
-  margin-bottom: 30px;
-}
-
-.links {
-  font-size: 14px;
-  margin-top: 25px;
-}
-
-.form
-{
-  font-family: 'Molengo', sans-serif;
-  padding: 10px;
-  margin: 10px;
-}
-
-.field
-
-.form_text
-{
-  margin-left: 136px;
-}
-
-
-
-.btn {
-  font-family: 'Molengo', sans-serif;
-/*  margin-right: 10%;
-  margin-left: 10%;*/
-  padding: 10px;
-  font-size: 20px;
-  width: 200px;
 }
 
 #get_tracks
 {
-  padding: 15px;
-  margin-left: 20px;
   text-align: center;
 }
 
 #get_tracks ul li
 {
- list-style: none;
+/* list-style: none;*/
+}
+
+.description
+{
+  margin: 1%;
+}
+.songs
+{
+/*  text-align: center;
+  height: 300px;
+  margin-bottom: 40px;*/
+}
+
+.songs h2
+{
+  margin-left: 2%;
+}
+
+.concert
+{
+/*  text-align: center;
+  height: 300px;
+  margin-bottom: 40px;*/
+}
+
+.concert h1 {
+/*  margin-left: 5%;*/
+}
+
+.concertname
+{
+/*  width: 300px;*/
+}
+
+.artists
+{
+/*  text-align: center;
+  height: 300px;
+  margin-bottom: 30px;*/
+}
+
+.links {
+/*  font-size: 14px;
+  margin-top: 25px;*/
 }
 
 /******************************************
@@ -236,24 +279,27 @@ h1
 /*******************************************/
 
 .photo  {
+/*  margin: 2%;*/
 /*  display: block;*/
-  border-radius: 10px;
+/*  border-radius: 10px;
   -webkit-transition: all 0.5s;
-  max-height: 200px;
+  max-height: 200px;*/
 }
 
 /*Hover effects*/
 .photo:hover {
-  -webkit-filter: none; /*Returns to default state*/
+/*  -webkit-filter: none; Returns to default state
   border-radius: 10px;
-
+*/
 }
 /*Default state for brightness has to be specified specifically*/
 .photo img.brightness:hover {
-  -webkit-filter: brightness(0);
+/*  -webkit-filter: brightness(0);*/
 }
 
 /*Filter styles*/
+
+/*
 .saturate {-webkit-filter: saturate(3);}
 .grayscale {-webkit-filter: grayscale(100%);}
 .contrast {-webkit-filter: contrast(160%);}
@@ -262,5 +308,5 @@ h1
 .invert {-webkit-filter: invert(100%);}
 .sepia {-webkit-filter: sepia(100%);}
 .huerotate {-webkit-filter: hue-rotate(180deg);}
-.opacity {-webkit-filter: opacity(70%);}
+.opacity {-webkit-filter: opacity(70%);}*/
 

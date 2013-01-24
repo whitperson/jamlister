@@ -37,4 +37,5 @@ class UsersController < ApplicationController
   def ensure_logged_in
     redirect_to root_path if @auth.nil?
   end
+
 end

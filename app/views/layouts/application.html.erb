@@ -1,43 +1,51 @@
-<!DOCTYPE html>
+r<!DOCTYPE html>
 <html>
 <head>
-  <title>Best Live Version</title>
+  <title>Best Ever Live Version</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 
 <body>
 
- <div class="container">
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="nav nav-pills">
-          <%= link_to "HOME | ", root_path %>
-          <%= display_links %>
+  <div class="container-fluid">
+
+      <header>
+        <h1>Best Ever Live Version</h1>
+      </header>
+
+    <div id="nav" class="navbar">
+      <ul class="nav nav-pills">
+        <% if @auth %>
+          <li class="btn"><%= link_to 'HOME', root_path %> </li>
+          <li class="btn"><%= link_to 'LOGOUT', logout_path, :method => :delete %></li>
+          <li class="btn"><%= link_to 'CREATE A NEW JAM', new_song_path %></li>
+          <li class="btn"><%= link_to 'ALL JAMS', songs_path %></li>
+          <li class="btn"><%= link_to 'ARTISTS', artists_path %></li>
+          <li class="btn"><%= link_to 'CONCERTS', concerts_path %></li>
+        <% else %>
+          <li class="btn"><%= link_to 'HOME', root_path  %></li>
+          <li class="btn"><%= link_to 'LOGIN', login_path %></li>
+          <li class="btn"><%= link_to 'REGISTER', register_path %></li>
+        <% end %>
+     </ul> <!-- end navpills -->
+
+        <div class="navsearch pull-right"><%= render :partial => 'shared/search' %>
         </div>
-      <div class="navsearch pull-right"><%= render :partial => 'shared/search' %> </div>
-    </div>
-  </div>
 
-    <header>
-      <h1>Best Ever Live Version</h1>
-    </header>
+    </div> <!-- end navbar -->
 
+<%= yield %>
 
-    <div class="row">
-         <%= yield %>
-    </div>
-  </div>
+  </div> <!-- end container -->
 
         <script>
-          // $.backstretch([
-          // "../assets/pedals.jpg"
-          // , "../assets/phish_redyellow.jpg"
-          // , "../assets/thenewdeal.jpg"
-          // ],{duration:3000,fade:750});
+          $.backstretch([
+          "../assets/pedals.jpg"
+          , "../assets/phish_redyellow.jpg"
+          , "../assets/thenewdeal.jpg"
+          ],{duration:5000,fade:900});
         </script>
 
   </body>

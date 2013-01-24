@@ -3,9 +3,9 @@
   <div class="span9 offset2">
     <ul>
     <% @data.each do |concert| %>
-        <li class="show_link"> <%= link_to concert['title'], "http://archive.org/details/#{concert['identifier']}", :target => "_blank" %></li>
+        <li class="show_link"> <h4><%= link_to concert['title'], "http://archive.org/details/#{concert['identifier']}", :target => "_blank" %> </h4></li>
         <% params[:url] = "http://archive.org/details/#{concert['identifier']}&output=json" %>
-        <li class="description"> <%= concert["description"] %></li>
+        <li class="description"> <h4> Description:</h4> <%= concert["description"] %></li>
 
         <%= form_tag '/get_tracks' do %>
           <%= hidden_field_tag 'url', params[:url] %>

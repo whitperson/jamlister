@@ -9,7 +9,10 @@ Jamlister::Application.routes.draw do
 
   resources :songs
   resources :concerts
+  match '/concerts/:id/songs' => 'concerts#songs', :as => 'concerts_songs'
+
   resources :artists
+  match '/artists/:id/songs' => 'artists#songs', :as => 'artists_songs'
 
   get '/register' => 'register#new'
   post '/register' => 'register#create'

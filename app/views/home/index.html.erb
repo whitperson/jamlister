@@ -1,41 +1,51 @@
 
-<div id="intro" class="row">
-    <p>Welcome to Best Ever Live Version, an app for curating the best versions of live concert audio.
-    Upload or link to your favorite tracks, edit them down to the best moments, and share them with the rest of the concert freaks of the world.</p>
+<div class="row-fluid">
+  <div id="intro" class="span6 offset3">
+  <p>Welcome to <em>Best Ever Live Version</em>, a simple web app for curating the best versions of live concert audio. Upload or link to your favorite tracks and share them with the rest of the concert freaks of the world.</p>
+  <p>In the future, we plan to add list-making and voting capablities, along with ways to edit tracks, include multiple song segments, and a more robust set of sharing options. </p>
+  </div>
+</div>
 
-    <div id="intro_buttons">
-        <%= display_buttons %>
-    </div>
+<div class="row-fluid">
+  <div id="main_buttons" class="span6 offset3">
+  <%= display_buttons %>
+  </div>
+</div>
+
+<div class="row-fluid">
+  <div id="get_started" class="span6 offset3">
+    <h2>Dig Into Some Jams...</h2>
+  </div>
+</div>
+
+<div class="row-fluid">
+  <div id="feature3" class="span4 feature">
+    <h3>Browse </h3>
+    <p> Explore all the live tracks we've already got on the site. </p>
+    <%= link_to 'ALL JAMS', songs_path, :class => 'btn btn-inverse' %>
+  </div>
+
+  <div id="feature2" class="span4 feature">
+    <h3>Got live track in mind?</h3>
+    <p>Quickly and easily add tracks via file upload or link to an exisintg .mp3 hosted elsewhere on the web. </p>
+      <%= link_to 'CREATE NEW JAM', new_song_path, :class => 'btn btn-inverse' %>
+  </div>
+
+  <div id="feature1" class="span4 feature">
+    <h3>Need Some Audio?</h3>
+    <p> Search the <a href="http://archive.org/details/etree" target="_blank">Live Music Archive</a> for concert audio from thousands of touring bands.</p>
+    <%= render :partial => 'shared/search' %>
+  </div>
 </div>
 
 <div class="row">
-    <div class="span6 offset2">
-    <h1>Get Started</h1>
-    </div>
-</div>
+  <div class="latest span7 offset3">
+    <h2>Check out the latest live tracks...</h2>
+  </div>
+  <div class="latest_songs">
 
-<div id="get_started" class="row">
-    <div id="feature1" class="span4 offset2">
-            <h3> Need Audio? Search:</h3>
-            <%= render :partial => 'shared/search' %>
-    </div>
-
-    <div id="feature2" class="span4">
-        <h3>Already have a live track in mind?</h3>
-        <%= link_to 'CREATE NEW JAM', new_song_path, :class => 'btn btn-inverse' %>
-    </div>
-</div>
-
-<div class="row">
-    <div id="latest" class="span9 offset2">
-      <h1>Check out the latest live tracks....</h1>
-    </div>
-</div>
-
-<div class="row">
-    <div class="span9 offset2">
-      <%= render :partial => 'shared/song', :collection => @songs, :as => :song %>
-    </div>
+    <%= render :partial => 'shared/song', :collection => @songs, :as => :song %>
+  </div>
 </div>
 
 

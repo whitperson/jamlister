@@ -1,4 +1,4 @@
-<div id="form">
+<div class="form">
 
 <%= form_for @artist, :html => {:multipart => true} do |f| %>
 
@@ -6,7 +6,7 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
-  <h1>Image</h1>
+  <h3>Image:</h3>
   <div class='field'>
     <%= f.label :local %>
     <%= f.file_field :photo %>
@@ -22,7 +22,7 @@
 
   </div>
   <div class='field'>
-    <%= f.submit %>
+    <%= f.submit :class => 'btn btn-inverse' %>
   </div>
 <% end %>
 </div>

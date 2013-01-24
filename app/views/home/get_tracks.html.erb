@@ -1,21 +1,21 @@
 
 <div id="search" class="row">
-  <div class="span9 offset1">
-    <h2>All Tracks From Selected Concert</h2>
+  <div class="span12">
+    <h3>All Tracks From Selected Concert:</h3>
 </div>
 
-  <div id="get_tracks" class="span12">
+  <div id="get_tracks" class="row">
     <ul>
       <% @tracks.each do |track| %>
         <li>
-          <div class="span3">
+          <div class="span4">
             <h4> <%= link_to track.title, track.url %> </h4>
           </div>
-          <div class="span3">
+          <div class="span4">
             <%= audio_tag track.url, :controls => true %>
          </div>
 
-          <div class="span3">
+          <div class="span4">
           <%= form_tag '/songs/new' do %>
             <% params[:name] = track.title %>
             <% params[:audio_link] = track.url %>

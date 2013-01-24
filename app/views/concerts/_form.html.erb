@@ -1,14 +1,13 @@
-<div class="row">
 
-  <div class="span8 offset2">
-  <%= form_for @concert, :html => {:multipart => true} do |f| %>
+    <div class="form">
+     <%= form_for @concert, :html => {:multipart => true} do |f| %>
 
     <div class='field'>
       <%= f.label :name %>
       <%= f.text_field :name %>
     </div>
 
-    <h3>Image</h3>
+    <h3>Image:</h3>
     <div class='field'>
       <%= f.label :local %>
       <%= f.file_field :photo %>
@@ -25,9 +24,10 @@
     </div>
 
     <div class='field'>
-      <%= f.submit %>
+      <%= f.submit  :class => 'btn btn-inverse' %>
     </div>
-</div>
 
-<% end %>
+
+      <% end %>
+
 </div>

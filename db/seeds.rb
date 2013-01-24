@@ -49,7 +49,7 @@ a5 = Artist.create(:name => "Steve Kimock Band", :remote_photo_url => "http://fa
 c8 = Concert.create(:name => "KVHW Live at Wetlands Preserve on 1998-10-17", :remote_photo_url => "http://farm7.staticflickr.com/6049/6318734165_dfbe6d2db0.jpg")
 
 s19 = Song.create(:name => "Tangled Hangers", :remote_photo_url => "http://farm6.staticflickr.com/5146/5576281728_04cf170fd3.jpg", :audio_link => "http://archive.org/download/kvhw98-10-17/kvhw98-10-17d1t01.ogg")
-s20 = Song.create(:name => "poonk", :remote_photo_url => "http://farm6.staticflickr.com/5142/5575661739_e86e198df2.jpg", :audio_link => "http://archive.org/download/kvhw98-10-17/kvhw98-10-17d3t04.ogg")
+s20 = Song.create(:name => "Poonk", :remote_photo_url => "http://farm6.staticflickr.com/5142/5575661739_e86e198df2.jpg", :audio_link => "http://archive.org/download/kvhw98-10-17/kvhw98-10-17d3t04.ogg")
 s21 = Song.create(:name => "Rocco", :remote_photo_url => " ", :audio_link => "http://archive.org/download/kvhw98-10-17/kvhw98-10-17d3t01.ogg")
 
 c9 = Concert.create(:name => "Steve Kimock Band Live at The Stone Church on 2005-10-27", :remote_photo_url => "http://farm7.staticflickr.com/6094/6318750441_a0c2f3264c.jpg")
@@ -61,14 +61,11 @@ a6 = Artist.create(:name => "Soulive", :remote_photo_url => "http://farm8.static
 
 c10 = Concert.create(:name => "Soulive Live at Stockholm Jazz Festival on 2005-07-19", :remote_photo_url => "http://farm6.staticflickr.com/5136/5519646141_8dd513b5af.jpg")
 s24 = Song.create(:name => "Crosstown Traffic", :remote_photo_url => "http://farm8.staticflickr.com/7068/6947347149_693d10248a.jpg", :audio_link => "http://archive.org/download/soulive2005-07-19.flacf/soulive2005-07-19t06.ogg")
-s25 = Song.create(:name => "Vapore", :remote_photo_url => "http://farm8.staticflickr.com/7202/6947451257_86eb31e005.jpg", :audio_link => "http://archive.org/download/soulive2005-07-19.flacf/soulive2005-07-19t03.ogg")
+s25 = Song.create(:name => "Vapor", :remote_photo_url => "http://farm8.staticflickr.com/7202/6947451257_86eb31e005.jpg", :audio_link => "http://archive.org/download/soulive2005-07-19.flacf/soulive2005-07-19t03.ogg")
 
 c11 = Concert.create(:name => "Soulive Live at Starr Hill Theatre on 2001-02-03", :remote_photo_url => "http://farm8.staticflickr.com/7065/6947426551_1c72926e84.jpg")
 s26 = Song.create(:name => "So Live!", :remote_photo_url => "http://farm8.staticflickr.com/7206/6801315888_6421f29d6f.jpg", :audio_link => "http://archive.org/download/soulive2001-02-03.matrix.shnf/soulive2001-02-03t03.ogg")
 s27 = Song.create(:name => "Uncle Junior", :remote_photo_url => "http://farm8.staticflickr.com/7070/6947403531_b44ec3e9bd.jpg", :audio_link => "http://archive.org/download/soulive2001-02-03.matrix.shnf/soulive2001-02-03t08.ogg")
-
-
-
 
 a7 = Artist.create(:name => "My Morning Jacket", :remote_photo_url => "http://farm4.staticflickr.com/3061/2837716465_a609a23f2c.jpg")
 c12 = Concert.create(:name => "My Morning Jacket Live at Madison Square Garden on 2008-12-31", :remote_photo_url => "http://farm4.staticflickr.com/3120/2837715737_027591b28a.jpg")
