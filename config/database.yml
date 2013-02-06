@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: jamlister
+  database: jamlister_development
   pool: 5
   username: postgres
   password:
@@ -9,7 +9,7 @@ development:
 production:
   adapter: postgresql
   encoding: unicode
-  database: jamlister
+  database: jamlister_production
   pool: 5
   username: postgres
   password:
